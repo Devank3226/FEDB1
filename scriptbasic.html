@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Javascript Basics</title>
+    </head>
+    <body>
+        <H1>Javascript basics</H1>
+        <H2>1. Write JS code having any two string methods</H2>
+        <p id="first a"></p>
+        <p id="first b"></p>
+        <H2>2. Write JS code having any two number methods</H2>
+        <p id="second a"></p>
+        <p id="second b"></p>
+        <p id="second c"></p>
+        <p id="second d"></p>
+        <H2>3. Write any one if-else program</H2>
+        <p id="third"></p>
+        <H2>4. Write any one switch-case program</H2>
+        <p id="forth"></p>
+        <H2>5. Write any one loop program</H2>
+        <p id="fifth"></p>
+        <script>
+            let line = "Length of this string using .length is:";
+            document.getElementById("first a").innerHTML = "Length of this string using .length is: " + line.length;
+            document.getElementById("first b").innerHTML = "To upper case: " + line.toUpperCase();
+
+            let x = 3.25, y = 4.14;
+            let text = x.toString(2);
+            document.getElementById("second a").innerHTML = "value of x is " + x + "<br>" + "value of y is " + y;
+            document.getElementById("second b").innerHTML = "using to string on x and adding";
+            document.getElementById("second c").innerHTML = text + y;
+            document.getElementById("second d").innerHTML = "using to fixed 3   : " + x.toFixed(3);
+
+            const time = new Date().getHours();
+            let greeting;
+            if (time < 10) {
+                greeting = "Good morning";
+            } else if (time < 20) {
+                greeting = "Good day";
+            } else {
+                greeting = "Good evening";
+            }
+            document.getElementById("third").innerHTML = greeting;
+
+
+            let day;
+            let date = new Date().getDay();
+            switch (date) {
+                case 0:
+                    day = "Sunday";
+                    break;
+                case 1:
+                    day = "Monday";
+                    break;
+                case 2:
+                    day = "Tuesday";
+                    break;
+                case 3:
+                    day = "Wednesday";
+                    break;
+                case 4:
+                    day = "Thursday";
+                    break;
+                case 5:
+                    day = "Friday";
+                    break;
+                case  6:
+                    day = "Saturday";
+            }
+            document.getElementById("forth").innerHTML = "Today is " + day;
+
+            const fruits = ["Apple", "Banana", "Cherry"];
+            let text2 = "";
+            let len = fruits.length;
+            for (let i=0; i<len; i++) {
+                text2 += fruits[i] + "<br>";
+            }
+            document.getElementById("fifth").innerHTML = text2;
+        </script>
+    </body>
+</html>
