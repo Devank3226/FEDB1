@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Javascript Basics</title>
+    </head>
+    <body>
+        <H1>Javascript Advance</H1>
+        <p>1. Create a BUTTON with caption CLICK HERE perform an event to display any message using confirm box when button is clicked</p>
+        <button onclick="confirmfunc()">CLICK HERE</button>
+
+        <p>2. Create a TEXT BOX &amp; perform an event to convert the message into UPPERCASE LETTER</p>
+        <input type="text" id="myinput" oninput="inputting()">
+        <p id="inputting"></p>
+
+        <p id="para3" onmouseover="red()" onmouseout="black()">3. Write down any 2-3 lines paragraph perform a mouse event to change the color of 
+            paragraph text from black to red when cursor is taken on paragraph.</p>
+        <p id="third"></p>
+        <script>
+            function confirmfunc() {
+                confirm("Are you sure?");
+            }
+            function inputting() {
+                let text = document.getElementById("myinput").value;
+                document.getElementById("inputting").innerHTML = "In Uppercase: " + text.toUpperCase();
+            }
+            function red() {
+                document.getElementById("para3").style.color = "red";
+            }
+            function black() {
+                document.getElementById("para3").style.color = "black";
+            }
+        </script>
+    </body>
+</html>
